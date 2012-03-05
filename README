@@ -1,0 +1,1 @@
+g++ Test.cpp -o test && ./test > test.out && clojure test.out > rtree.html
