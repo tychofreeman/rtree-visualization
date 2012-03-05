@@ -71,7 +71,7 @@ int main()
 			 ;
 
   int i, nhits;
-  int nrects = 30;
+  int nrects = 100;
 
   for(i=0; i<nrects; i++)
   {
@@ -96,7 +96,7 @@ int main()
   					<< "								<script type='text/javascript+protovis'>" << std::endl
 						<< "\")" << std::endl
   			  	<< "(print \"var treeNodes={nodes:[\")" << std::endl
-				  	<< "(print (apply str (map #(str \"{nodeName:\" % \", group:1},\n\") (print-keys2 [\"root\"] data))))" << std::endl
+				  	<< "(print (apply str (map #(str \"{nodeName:\" % \", group:\" % \"},\n\") (print-keys2 [\"root\"] data))))" << std::endl
 				  	<< "(print \"], links:[\")" << std::endl
 				  	<< "(print (apply str (map #(str \"{source:\" (:source %) \", target:\" (:target %) \", value:1},\n\") (map-conns (print-keys2 [\"root\"] data) (print-links2 [\"root\"] data)))))" << std::endl
 				  	<< "(print \"]};\")" << std::endl
